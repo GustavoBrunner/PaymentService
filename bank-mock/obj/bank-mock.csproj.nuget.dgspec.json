@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.net projects\\PaymentService\\bank-mock\\bank-mock.csproj": {}
+    "d:\\.net projects\\PaymentService\\bank-mock\\bank-mock.csproj": {}
   },
   "projects": {
-    "D:\\.net projects\\PaymentService\\bank-mock\\bank-mock.csproj": {
+    "d:\\.net projects\\PaymentService\\bank-mock\\bank-mock.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.net projects\\PaymentService\\bank-mock\\bank-mock.csproj",
+        "projectUniqueName": "d:\\.net projects\\PaymentService\\bank-mock\\bank-mock.csproj",
         "projectName": "bank-mock",
-        "projectPath": "D:\\.net projects\\PaymentService\\bank-mock\\bank-mock.csproj",
+        "projectPath": "d:\\.net projects\\PaymentService\\bank-mock\\bank-mock.csproj",
         "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-        "outputPath": "D:\\.net projects\\PaymentService\\bank-mock\\obj\\",
+        "outputPath": "d:\\.net projects\\PaymentService\\bank-mock\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config",

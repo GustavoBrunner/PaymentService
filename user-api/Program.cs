@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using user_api.Entities.Db;
+using user_api.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,8 @@ builder.Services.AddDbContext<UserDbContext>(options => {
     options.UseMySql(connectionString,
     ServerVersion.AutoDetect(connectionString));
 });
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 

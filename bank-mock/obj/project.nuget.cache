@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jUr9ht9ZVAs=",
+  "dgSpecHash": "7YFgT3QROEU=",
   "success": true,
-  "projectFilePath": "D:\\.net projects\\PaymentService\\bank-mock\\bank-mock.csproj",
+  "projectFilePath": "d:\\.net projects\\PaymentService\\bank-mock\\bank-mock.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gusta\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\gusta\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

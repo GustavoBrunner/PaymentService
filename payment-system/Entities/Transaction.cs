@@ -27,8 +27,5 @@ namespace payment_system.Entities
 
         public bool IsFinished { get; set; } = false;
 
-        public Transaction(){
-            this.TransactionId = Guid.NewGuid().ToString();
-        }
     }
 }

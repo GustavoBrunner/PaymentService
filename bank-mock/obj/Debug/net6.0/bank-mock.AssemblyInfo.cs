@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bank-mock")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37d65563844d99cc13160e3188a6df7c86bbda97")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4faf25bf42c7e4bd3b214767251cc73807c16815")]
 [assembly: System.Reflection.AssemblyProductAttribute("bank-mock")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bank-mock")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -18,6 +18,20 @@ builder.Services.AddDbContext<TransactionsDbContext>(options => {
 builder.Services.AddHttpClient("bank-mock", c => {
     c.BaseAddress = new Uri(builder.Configuration["ServiceUri:BankMock"]);
 });
+// .ConfigurePrimaryHttpMessageHandler(() =>
+// {
+//     var handler = new HttpClientHandler();
+//     handler.ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true;
+//     return handler;
+// });
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy",
+        builder => builder.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
+});
 
 var app = builder.Build();
 
@@ -29,8 +43,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+
+//app.UseAuthorization();
+
 
 app.MapControllers();
+
+
 
 app.Run();

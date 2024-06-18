@@ -17,13 +17,13 @@ namespace user_api.Controllers
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-        private const string apiUrl = "transaction";
+        private const string apiUrl = "api/transaction/create";
         private readonly IUserRepository _userRepository;
 
         private readonly JsonSerializerOptions _serializerOptions;
         private readonly IHttpClientFactory _clientFactory;
 
-        private Transaction transaction1;
+        private TransactionViewModel transaction1;
 
         public UserController(IUserRepository userRepository, IHttpClientFactory clientFactory)
         {
@@ -102,22 +102,6 @@ namespace user_api.Controllers
             catch(Exception ex){
                 return BadRequest(ex.Message);
             }
-        }
-        [HttpPost("/transaction")]
-        public async Task<ActionResult<Transaction>> CreateNewTransaction(TransactionViewModel transaction){
-            var client = _clientFactory.CreateClient("payment-system");
-
-            StringContent content = new StringContent(
-                JsonSerializer.Serialize(transaction), Encoding.UTF8, "application/json");
-            
-            using(var response = await client.PostAsync(apiUrl, content)){
-                if(response.IsSuccessStatusCode){
-                    var apiResponse = await response.Content.ReadAsStringAsync();
-                    var transaction1 = JsonSerializer.Deserialize<TransactionViewModel>(apiResponse, _serializerOptions); 
-                }
-            }
-            
-            return transaction1;
         }
     }
 }

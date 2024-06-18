@@ -13,6 +13,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient("payment-system", c => {
     c.BaseAddress = new Uri(builder.Configuration["ServiceUri:TransactionSystem"]);
 });
+// .ConfigurePrimaryHttpMessageHandler(() =>
+// {
+//     var handler = new HttpClientHandler();
+//     handler.ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) => true;
+//     return handler;
+// });
 
 var connectionString = builder.Configuration.GetConnectionString(nameof(UserDbContext));
 

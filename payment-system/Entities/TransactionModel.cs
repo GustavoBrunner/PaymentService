@@ -8,15 +8,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace payment_system.Entities
 {
-    public class Transaction 
+    public class TransactionModel 
     {
         [Key]
-        public string TransactionId { get; set; }
+        public string TransactionId { get; set; } = string.Empty;
         
         
         public string UserId { get; set; } = string.Empty;
 
-        public string ReceiverId { get; set; }
+        public string ReceiverId { get; set; } = string.Empty;
         
         public UserDto Payer { get; set; } = new UserDto();
         
@@ -27,5 +27,10 @@ namespace payment_system.Entities
 
         public bool IsFinished { get; set; } = false;
 
+        public TransactionModel(){
+            this.TransactionId = Guid.NewGuid().ToString();
+            
+        }
+        
     }
 }
